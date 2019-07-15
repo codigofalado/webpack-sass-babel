@@ -40,6 +40,21 @@ module.exports = {
           },
           "sass-loader" // 1 - compiles Sass to CSS, using Node Sass by default
         ]
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: { outputPath: "img" }
+          }
+        ]
+      },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: "html-loader"
+        }
       }
     ]
   },

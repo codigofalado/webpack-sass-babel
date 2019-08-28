@@ -1,0 +1,73 @@
+@import url("https://use.typekit.net/bqp8wjl.css");
+@import "reset";
+@import "breakpoint-sass";
+@import "breakpoint-slicer";
+
+$slicer-breakpoints: 0 400px 900px 1200px 1440px;
+body {
+  font-family: "myriad-pro", sans-serif;
+}
+
+#MacacoRosa {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+  // Layout container
+  > div {
+    &:first-child {
+      max-width: 600px;
+      flex: 0 1 auto;
+    }
+    &:last-child {
+      flex: auto;
+      background-image: url("../img/background.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      &::before {
+        content: "";
+        width: 13px;
+        height: 100%;
+        position: absolute;
+        background-image: url("../img/lines.svg");
+        background-repeat: repeat-y;
+      }
+    }
+  }
+  // Content Styles
+  .container {
+    margin: 30px 65px;
+  }
+  .logo {
+    display: block;
+    margin-bottom: 45px;
+    max-width: 300px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.15px;
+    color: #333;
+    margin-bottom: 12px;
+    @include from(3) {
+      font-size: 38px;
+    }
+  }
+  p {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.29;
+    color: peru;
+    @include from(3) {
+      font-size: 24px;
+    }
+  }
+  footer {
+    max-width: 60%;
+    margin: 20px auto;
+    border: 4px double hotpink;
+    padding: 40px;
+  }
+}

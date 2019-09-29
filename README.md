@@ -10,7 +10,7 @@ Boilerplate para facilitar o uso do Webpack com DevServer, SASS, PostCSS com Aut
 4. Desenvolva seu projeto na pasta src.
 
 
-# Inglês:
+# English:
 
 Boilerplate for Webpack with DevServer, SASS, PostCSS with Autoprefixer and Babel (ES6 to vanilla JS)
 

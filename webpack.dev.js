@@ -1,6 +1,7 @@
 const path = require("path");
 const common = require("./webpack.common");
 const merge = require("webpack-merge");
+const webpack = require('webpack')
 
 module.exports = merge(common, {
   mode: "development",
@@ -8,6 +9,13 @@ module.exports = merge(common, {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist")
   },
+  devServer:{
+    hot: true,
+    port: 3000
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
   module: {
     rules: [
       {
